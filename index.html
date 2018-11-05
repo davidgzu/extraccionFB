@@ -50,7 +50,7 @@
       }
 
       function testAPI(){
-        FB.api('/me?fields=name,email,birthday,location', function(response){
+        FB.api('/me?fields=id,name,age_range,birthday,email,first_name,hometown,location,languages,context,gender,posts.limit(10),likes.limit(10),website', function(response){
           if(response && !response.error){
             console.log(response);
             buildProfile(response);
